@@ -1,0 +1,29 @@
+{
+    "Hostname": "Ambar-PC",
+    "IP Address": "192.168.68.163",
+    "MAC Address": "00:c2",
+    "Username": "mmpl1",
+    "Operating System": "Windows",
+    "OS Version": "10.0.26100",
+    "OS Release": "11",
+    "Architecture": "AMD64",
+    "Processor": "Intel64 Family 6 Model 140 Stepping 2, GenuineIntel",
+    "CPU Cores": 2,
+    "Logical CPUs": 4,
+    "Total RAM (GB)": 7.75,
+    "Disk": [
+        {
+            "Device": "C:\\",
+            "Mountpoint": "C:\\",
+            "File system": "NTFS",
+            "Total Size (GB)": 279.9
+        },
+        {
+            "Device": "D:\\",
+            "Mountpoint": "D:\\",
+            "File system": "NTFS",
+            "Total Size (GB)": 195.31
+        }
+    ],
+    "Serial Number": "CND25124FM"
+}

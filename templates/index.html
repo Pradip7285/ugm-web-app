@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ChatGPT Flask App</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Chat with ChatGPT</h1>
+        <form method="POST">
+            <label for="user_input">Your Message:</label>
+            <textarea id="user_input" name="user_input" rows="4" required>{{ user_input }}</textarea>
+            <button type="submit">Send</button>
+        </form>
+        {% if chatbot_reply %}
+        <div class="response">
+            <h2>ChatGPT Reply:</h2>
+            <p>{{ chatbot_reply }}</p>
+        </div>
+        {% endif %}
+    </div>
+</body>
+</html>

@@ -1,0 +1,1644 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>UG Mining Corp | Premium Underground Mining Solutions</title>
+    <meta
+      name="description"
+      content="World-class underground mining services with cutting-edge technology and sustainable practices"
+    />
+
+    <!-- Preload critical resources -->
+    <link
+      rel="preload"
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap"
+      as="style"
+    />
+    <link
+      rel="preload"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      as="style"
+    />
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                light: "#005f73",
+                dark: "#0a9396",
+              },
+              secondary: {
+                light: "#ee9b00",
+                dark: "#ca6702",
+              },
+              dark: {
+                900: "#0d1b2a",
+                800: "#1b263b",
+                700: "#415a77",
+              },
+              light: {
+                100: "#f8f9fa",
+                200: "#e9ecef",
+                300: "#dee2e6",
+              },
+            },
+            fontFamily: {
+              sans: ["Inter", "sans-serif"],
+              display: ['"DM Sans"', "sans-serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 1s ease-in-out",
+              float: "float 6s ease-in-out infinite",
+              "gradient-x": "gradientX 15s ease infinite",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              float: {
+                "0%, 100%": { transform: "translateY(0)" },
+                "50%": { transform: "translateY(-10px)" },
+              },
+              gradientX: {
+                "0%, 100%": { "background-position": "0% 50%" },
+                "50%": { "background-position": "100% 50%" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Google Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+    />
+
+    <style>
+      /* Custom styles */
+      :root {
+        --header-height: 80px;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+
+      body {
+        @apply bg-light-100 dark:bg-dark-900 text-gray-800 dark:text-gray-100 font-sans antialiased;
+      }
+
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(0, 95, 115, 0.9) 0%,
+          rgba(10, 147, 150, 0.8) 50%,
+          rgba(238, 155, 0, 0.6) 100%
+        );
+      }
+
+      .section {
+        scroll-margin-top: var(--header-height);
+      }
+
+      .parallax-bg {
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+
+      .text-stroke {
+        -webkit-text-stroke: 1px currentColor;
+        text-stroke: 1px currentColor;
+        color: transparent;
+      }
+
+      .hover-scale {
+        @apply transition-transform duration-300 hover:scale-105;
+      }
+
+      .glass-effect {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        background: rgba(255, 255, 255, 0.1);
+      }
+
+      .gradient-text {
+        @apply bg-clip-text text-transparent bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark;
+      }
+    </style>
+  </head>
+  <body class="overflow-x-hidden">
+    <!-- Preloader -->
+    <div
+      id="preloader"
+      class="fixed inset-0 z-50 flex items-center justify-center bg-white dark:bg-dark-900 transition-opacity duration-500"
+    >
+      <div class="relative w-24 h-24">
+        <div
+          class="absolute inset-0 border-4 border-t-primary-light dark:border-t-primary-dark border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin"
+        ></div>
+        <div
+          class="absolute inset-4 border-4 border-t-secondary-light dark:border-t-secondary-dark border-r-transparent border-b-transparent border-l-transparent rounded-full animate-spin animation-delay-150"
+        ></div>
+        <div class="flex items-center justify-center w-full h-full">
+          <i
+            class="fas fa-mountain text-3xl text-primary-light dark:text-primary-dark"
+          ></i>
+        </div>
+      </div>
+    </div>
+
+    <!-- Header -->
+    <header
+      class="fixed w-full z-40 bg-white/90 dark:bg-dark-800/90 backdrop-blur-md shadow-sm border-b border-gray-200 dark:border-dark-700 transition-all duration-300"
+      style="height: var(--header-height)"
+    >
+      <div
+        class="container mx-auto px-6 h-full flex justify-between items-center"
+      >
+        <!-- Logo -->
+        <a href="#home" class="flex items-center group">
+          <div
+            class="w-12 h-12 bg-primary-light dark:bg-primary-dark rounded-xl flex items-center justify-center mr-3 transition-all duration-300 group-hover:rotate-12 group-hover:bg-secondary-light dark:group-hover:bg-secondary-dark"
+          >
+            <i class="fas fa-mountain text-white text-xl"></i>
+          </div>
+          <span class="text-2xl font-bold font-display gradient-text"
+            >UG Mining</span
+          >
+        </a>
+
+        <!-- Desktop Navigation -->
+        <nav class="hidden lg:flex space-x-8 items-center">
+          <a
+            href="#home"
+            class="relative font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 group"
+          >
+            Home
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#services"
+            class="relative font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 group"
+          >
+            Services
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#about"
+            class="relative font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 group"
+          >
+            About Us
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#leadership"
+            class="relative font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 group"
+          >
+            Leadership
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <a
+            href="#contact"
+            class="relative font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 group"
+          >
+            Contact
+            <span
+              class="absolute bottom-0 left-0 w-0 h-0.5 bg-primary-light dark:bg-primary-dark transition-all duration-300 group-hover:w-full"
+            ></span>
+          </a>
+          <button
+            id="theme-toggle"
+            class="ml-4 p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors duration-300"
+          >
+            <i class="fas fa-moon dark:hidden text-gray-700"></i>
+            <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+          </button>
+        </nav>
+
+        <!-- Mobile Menu Button -->
+        <button
+          id="mobile-menu-button"
+          class="lg:hidden p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors duration-300"
+        >
+          <i class="fas fa-bars text-xl text-gray-700 dark:text-gray-300"></i>
+        </button>
+      </div>
+    </header>
+
+    <!-- Mobile Menu -->
+    <div
+      id="mobile-menu"
+      class="mobile-menu fixed inset-y-0 right-0 w-80 bg-white dark:bg-dark-800 shadow-2xl z-50 p-8 transform translate-x-full transition-transform duration-300 ease-in-out"
+    >
+      <div class="flex justify-between items-center mb-12">
+        <div class="flex items-center">
+          <div
+            class="w-10 h-10 bg-primary-light dark:bg-primary-dark rounded-xl flex items-center justify-center mr-3"
+          >
+            <i class="fas fa-mountain text-white text-lg"></i>
+          </div>
+          <span class="text-xl font-bold font-display gradient-text"
+            >UG Mining</span
+          >
+        </div>
+        <button
+          id="mobile-menu-close"
+          class="p-2 rounded-xl hover:bg-gray-100 dark:hover:bg-dark-700 transition-colors duration-300"
+        >
+          <i class="fas fa-times text-gray-700 dark:text-gray-300"></i>
+        </button>
+      </div>
+      <nav class="flex flex-col space-y-6">
+        <a
+          href="#home"
+          class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 py-2 border-b border-gray-100 dark:border-dark-700"
+        >
+          Home
+        </a>
+        <a
+          href="#services"
+          class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 py-2 border-b border-gray-100 dark:border-dark-700"
+        >
+          Services
+        </a>
+        <a
+          href="#about"
+          class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 py-2 border-b border-gray-100 dark:border-dark-700"
+        >
+          About Us
+        </a>
+        <a
+          href="#leadership"
+          class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 py-2 border-b border-gray-100 dark:border-dark-700"
+        >
+          Leadership
+        </a>
+        <a
+          href="#contact"
+          class="text-lg font-medium text-gray-700 dark:text-gray-300 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300 py-2 border-b border-gray-100 dark:border-dark-700"
+        >
+          Contact
+        </a>
+      </nav>
+      <div class="absolute bottom-8 left-8 right-8">
+        <button
+          id="mobile-theme-toggle"
+          class="w-full p-3 rounded-xl bg-gray-100 dark:bg-dark-700 flex items-center justify-center space-x-3 transition-colors duration-300"
+        >
+          <i class="fas fa-moon dark:hidden text-gray-700"></i>
+          <i class="fas fa-sun hidden dark:block text-yellow-300"></i>
+          <span class="font-medium">Toggle Theme</span>
+        </button>
+      </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Hero Section -->
+      <section
+        id="home"
+        class="section min-h-screen flex items-center justify-center pt-20 relative overflow-hidden"
+      >
+        <!-- Animated background -->
+        <div class="absolute inset-0 overflow-hidden">
+          <div class="absolute inset-0 hero-gradient opacity-90"></div>
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            class="absolute inset-0 w-full h-full object-cover opacity-30"
+          >
+            <source
+              src="https://assets.mixkit.co/videos/preview/mixkit-excavator-working-in-a-quarry-39783-large.mp4"
+              type="video/mp4"
+            />
+          </video>
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-dark-900/50 to-transparent"
+          ></div>
+        </div>
+
+        <div
+          class="container mx-auto px-6 py-32 relative z-10 text-center animate-fade-in"
+        >
+          <div class="max-w-4xl mx-auto">
+            <h1
+              class="text-4xl md:text-6xl lg:text-7xl font-bold font-display mb-6 text-white leading-tight"
+            >
+              <span class="inline-block">Innovative</span>
+              <span class="inline-block gradient-text">Underground</span>
+              <span class="inline-block">Mining Solutions</span>
+            </h1>
+            <p
+              class="text-xl md:text-2xl text-gray-200 mb-10 max-w-3xl mx-auto"
+            >
+              Pioneering sustainable underground mining with cutting-edge
+              technology and decades of expertise.
+            </p>
+            <div class="flex flex-col sm:flex-row justify-center gap-4">
+              <a
+                href="#contact"
+                class="bg-white text-dark-800 hover:bg-gray-100 px-8 py-4 rounded-xl font-medium transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <span>Get in Touch</span>
+                <i class="fas fa-arrow-right"></i>
+              </a>
+              <a
+                href="#services"
+                class="bg-transparent border-2 border-white text-white hover:bg-white/10 px-8 py-4 rounded-xl font-medium transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl flex items-center justify-center space-x-2"
+              >
+                <span>Our Services</span>
+                <i class="fas fa-chevron-down"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div
+          class="absolute bottom-10 left-0 right-0 flex justify-center animate-float"
+        >
+          <a href="#services" class="text-white">
+            <i class="fas fa-chevron-down text-2xl"></i>
+          </a>
+        </div>
+      </section>
+
+      <!-- Clients Section -->
+      <!-- <section
+        class="py-12 bg-white dark:bg-dark-800 border-b border-gray-200 dark:border-dark-700"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-10">
+            <p
+              class="text-sm uppercase tracking-wider text-gray-500 dark:text-gray-400 mb-2"
+            >
+              Trusted by industry leaders
+            </p>
+          </div>
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8 items-center"
+          >
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+1"
+                alt="Client Logo"
+                class="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+2"
+                alt="Client Logo"
+                class="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+3"
+                alt="Client Logo"
+                class="h-12 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+4"
+                alt="Client Logo"
+                class="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+5"
+                alt="Client Logo"
+                class="h-12 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+            <div class="flex justify-center">
+              <img
+                src="https://via.placeholder.com/150x60?text=Client+6"
+                alt="Client Logo"
+                class="h-10 opacity-70 hover:opacity-100 transition-opacity duration-300"
+                loading="lazy"
+              />
+            </div>
+          </div>
+        </div>
+      </section> -->
+
+      <!-- Services Section -->
+      <section id="services" class="section py-20 bg-gray-50 dark:bg-dark-900">
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span
+              class="text-sm uppercase tracking-wider text-primary-light dark:text-primary-dark font-medium mb-2"
+              >Our Expertise</span
+            >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6 text-gray-800 dark:text-white"
+            >
+              Comprehensive <span class="gradient-text">Mining Services</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+              Tailored solutions that address every aspect of modern underground
+              mining operations.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Service 1 -->
+            <div
+              class="group bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-700"
+            >
+              <div class="relative h-60 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1604999565976-8913ad2ddb7c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Geological survey team working"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-2xl font-bold text-white">
+                    Exploration & GR Report
+                  </h3>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 bg-primary-light dark:bg-primary-dark rounded-xl flex items-center justify-center text-white transform rotate-12 group-hover:rotate-0 transition-transform duration-500"
+                >
+                  <i class="fas fa-digging text-xl"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  Comprehensive mineral deposit documentation through advanced
+                  geological surveys, sampling, and drilling activities.
+                </p>
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Detailed geological mapping</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Core sampling & analysis</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Resource estimation modeling</span
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-primary-light dark:text-primary-dark font-medium group-hover:text-secondary-light dark:group-hover:text-secondary-dark transition-colors duration-300"
+                >
+                  Learn more
+                  <svg
+                    class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Service 2 -->
+            <div
+              class="group bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-700"
+            >
+              <div class="relative h-60 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Mining extraction"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-2xl font-bold text-white">
+                    Mineral Extraction
+                  </h3>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 bg-primary-light dark:bg-primary-dark rounded-xl flex items-center justify-center text-white transform rotate-12 group-hover:rotate-0 transition-transform duration-500"
+                >
+                  <i class="fas fa-hammer text-xl"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  Efficient and environmentally responsible mineral extraction
+                  processes with maximum yield optimization.
+                </p>
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Advanced drilling techniques</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Precision blasting</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Continuous monitoring</span
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-primary-light dark:text-primary-dark font-medium group-hover:text-secondary-light dark:group-hover:text-secondary-dark transition-colors duration-300"
+                >
+                  Learn more
+                  <svg
+                    class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+
+            <!-- Service 3 -->
+            <div
+              class="group bg-white dark:bg-dark-800 rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition-all duration-500 transform hover:-translate-y-2 border border-gray-200 dark:border-dark-700"
+            >
+              <div class="relative h-60 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1581093057306-9d5a06bbdf2c?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Mineral processing"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-black/30 to-transparent"
+                ></div>
+                <div class="absolute bottom-0 left-0 right-0 p-6">
+                  <h3 class="text-2xl font-bold text-white">
+                    Mineral Processing
+                  </h3>
+                </div>
+                <div
+                  class="absolute top-4 right-4 w-12 h-12 bg-primary-light dark:bg-primary-dark rounded-xl flex items-center justify-center text-white transform rotate-12 group-hover:rotate-0 transition-transform duration-500"
+                >
+                  <i class="fas fa-recycle text-xl"></i>
+                </div>
+              </div>
+              <div class="p-6">
+                <p class="text-gray-600 dark:text-gray-300 mb-6">
+                  State-of-the-art processing techniques to maximize mineral
+                  yield and purity while minimizing waste.
+                </p>
+                <ul class="space-y-3 mb-6">
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Crushing & grinding</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Separation techniques</span
+                    >
+                  </li>
+                  <li class="flex items-start">
+                    <div
+                      class="w-6 h-6 bg-primary-light/10 dark:bg-primary-dark/10 rounded-full flex items-center justify-center mr-3 mt-0.5 flex-shrink-0"
+                    >
+                      <div
+                        class="w-2 h-2 bg-primary-light dark:bg-primary-dark rounded-full"
+                      ></div>
+                    </div>
+                    <span class="text-gray-700 dark:text-gray-300"
+                      >Quality control</span
+                    >
+                  </li>
+                </ul>
+                <a
+                  href="#"
+                  class="inline-flex items-center text-primary-light dark:text-primary-dark font-medium group-hover:text-secondary-light dark:group-hover:text-secondary-dark transition-colors duration-300"
+                >
+                  Learn more
+                  <svg
+                    class="w-4 h-4 ml-2 transition-transform duration-300 group-hover:translate-x-2"
+                    fill="none"
+                    stroke="currentColor"
+                    viewBox="0 0 24 24"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      d="M9 5l7 7-7 7"
+                    ></path>
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <div class="text-center mt-16">
+            <a
+              href="#"
+              class="inline-flex items-center px-6 py-3 border border-primary-light dark:border-primary-dark rounded-full text-primary-light dark:text-primary-dark font-medium hover:bg-primary-light/5 dark:hover:bg-primary-dark/10 transition"
+            >
+              View All Services
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Stats Section -->
+      <section class="py-20 bg-primary-light dark:bg-primary-dark text-white">
+        <div class="container mx-auto px-6">
+          <div class="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold mb-2">25+</div>
+              <div class="text-lg font-medium">Years in Business</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold mb-2">50+</div>
+              <div class="text-lg font-medium">Active Sites</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold mb-2">10k+</div>
+              <div class="text-lg font-medium">Employees</div>
+            </div>
+            <div class="text-center">
+              <div class="text-4xl md:text-5xl font-bold mb-2">$5B+</div>
+              <div class="text-lg font-medium">Annual Revenue</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- About Us Section -->
+      <section id="about" class="section py-20 bg-white dark:bg-dark-900">
+        <div class="container mx-auto px-6">
+          <div class="flex flex-col lg:flex-row items-center gap-12">
+            <!-- Image Column -->
+            <div class="lg:w-1/2">
+              <div
+                class="relative rounded-3xl overflow-hidden shadow-2xl hover-scale"
+              >
+                <img
+                  src="https://static.wixstatic.com/media/d786af_7460864c5b6244e58b3177bf1c0144b8~mv2.webp/v1/fill/w_207,h_156,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/DALL%C2%B7E%202025-02-21%2015_46_34%20-%20A%20detailed%20scene%20of%20underground%20mining%20exploration%20and%20assess.webp"
+                  alt="UGM Mining underground coal mining operation"
+                  class="w-full h-auto object-cover"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-8"
+                >
+                  <h3 class="text-2xl font-bold text-white">
+                    Pioneering India's Underground Mining Future
+                  </h3>
+                </div>
+                <div
+                  class="absolute top-6 left-6 bg-white dark:bg-dark-800 text-primary-light dark:text-primary-dark px-4 py-2 rounded-full text-sm font-medium shadow-md"
+                >
+                  Since 1995
+                </div>
+              </div>
+            </div>
+
+            <!-- Content Column -->
+            <div class="lg:w-1/2">
+              <span
+                class="text-sm uppercase tracking-wider text-primary-light dark:text-primary-dark font-medium mb-2"
+                >About Us</span
+              >
+              <h2
+                class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6 text-gray-800 dark:text-white"
+              >
+                Leading
+                <span class="gradient-text">Underground Mining</span> Innovation
+              </h2>
+
+              <div class="space-y-6">
+                <!-- Company Overview -->
+                <div>
+                  <p
+                    class="text-lg text-gray-600 dark:text-gray-300 leading-relaxed"
+                  >
+                    Headquartered in Kolkata, UGM Mining is a premier
+                    underground coal mining company helmed by industry veterans
+                    with combined expertise spanning over two centuries. We
+                    merge rich experience with forward-looking innovation to
+                    transform underground mining from an art to a science.
+                  </p>
+                </div>
+
+                <!-- Vision & Mission Cards -->
+                <div class="grid md:grid-cols-2 gap-4">
+                  <!-- Vision Card -->
+                  <div
+                    class="bg-gray-50 dark:bg-dark-800 p-5 rounded-xl border-l-4 border-primary-light dark:border-primary-dark hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-primary-light/10 dark:bg-primary-dark/20 rounded-xl flex items-center justify-center mr-3"
+                      >
+                        <i
+                          class="fas fa-eye text-primary-light dark:text-primary-dark"
+                        ></i>
+                      </div>
+                      <h3
+                        class="font-bold text-lg text-gray-800 dark:text-white"
+                      >
+                        Our Vision
+                      </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                      To lead India in sustainable coal mining, recognized for
+                      safety, environmental stewardship, and continuous
+                      improvement while powering the nation's development.
+                    </p>
+                  </div>
+
+                  <!-- Mission Card -->
+                  <div
+                    class="bg-gray-50 dark:bg-dark-800 p-5 rounded-xl border-l-4 border-secondary-light dark:border-secondary-dark hover:shadow-lg transition-shadow duration-300"
+                  >
+                    <div class="flex items-center mb-3">
+                      <div
+                        class="w-10 h-10 bg-secondary-light/10 dark:bg-secondary-dark/20 rounded-xl flex items-center justify-center mr-3"
+                      >
+                        <i
+                          class="fas fa-bullseye text-secondary-light dark:text-secondary-dark"
+                        ></i>
+                      </div>
+                      <h3
+                        class="font-bold text-lg text-gray-800 dark:text-white"
+                      >
+                        Our Mission
+                      </h3>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300 text-sm">
+                      To responsibly extract high-quality coal through
+                      innovative technologies and operational excellence,
+                      ensuring well-being for our workforce, communities, and
+                      environment.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Commitment Statement -->
+                <div
+                  class="mt-6 p-6 bg-primary-light/5 dark:bg-primary-dark/10 rounded-xl border border-primary-light/20 dark:border-primary-dark/20"
+                >
+                  <p class="text-gray-600 dark:text-gray-300 italic">
+                    "Our commitment to innovation, safety, and environmental
+                    stewardship has earned us recognition as one of India's most
+                    sustainable mining companies."
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Leadership Section -->
+      <section
+        id="leadership"
+        class="section py-20 bg-gray-50 dark:bg-dark-800"
+      >
+        <div class="container mx-auto px-6">
+          <div class="text-center mb-16 max-w-3xl mx-auto">
+            <span
+              class="text-sm uppercase tracking-wider text-primary-light dark:text-primary-dark font-medium mb-2"
+              >Our Team</span
+            >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6 text-gray-800 dark:text-white"
+            >
+              Executive <span class="gradient-text">Leadership</span>
+            </h2>
+            <p class="text-lg text-gray-600 dark:text-gray-300">
+              Visionary leaders driving our mining excellence with decades of
+              combined industry experience.
+            </p>
+          </div>
+
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-5xl mx-auto">
+            <!-- Leader 1 -->
+            <div
+              class="group relative bg-white dark:bg-dark-700 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500"
+            >
+              <div class="relative h-96 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1560250097-0b93528c311a?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="John Smith, CEO"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"
+                ></div>
+              </div>
+              <div class="p-8 relative -mt-16">
+                <div
+                  class="bg-white dark:bg-dark-700 rounded-2xl shadow-xl p-8 transition-all duration-500 group-hover:shadow-2xl"
+                >
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3
+                        class="text-2xl font-bold text-gray-800 dark:text-white"
+                      >
+                        John Smith
+                      </h3>
+                      <p
+                        class="text-primary-light dark:text-primary-dark font-medium mb-4"
+                      >
+                        Chief Executive Officer
+                      </p>
+                    </div>
+                    <div class="flex space-x-3">
+                      <a
+                        href="#"
+                        class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-dark-600 flex items-center justify-center text-gray-500 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+                      >
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    30+ years transforming mining operations with a focus on
+                    safety, efficiency, and sustainable growth strategies.
+                  </p>
+                  <div
+                    class="pt-6 border-t border-gray-200 dark:border-dark-600"
+                  >
+                    <h4
+                      class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider"
+                    >
+                      Key Expertise
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Operational Excellence</span
+                      >
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Strategic Growth</span
+                      >
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Safety Leadership</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Leader 2 -->
+            <div
+              class="group relative bg-white dark:bg-dark-700 rounded-3xl overflow-hidden shadow-2xl hover:shadow-3xl transition-all duration-500"
+            >
+              <div class="relative h-96 overflow-hidden">
+                <img
+                  src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80"
+                  alt="Sarah Johnson, CFO"
+                  class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
+                  loading="lazy"
+                />
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/50 via-black/20 to-transparent"
+                ></div>
+              </div>
+              <div class="p-8 relative -mt-16">
+                <div
+                  class="bg-white dark:bg-dark-700 rounded-2xl shadow-xl p-8 transition-all duration-500 group-hover:shadow-2xl"
+                >
+                  <div class="flex items-start justify-between">
+                    <div>
+                      <h3
+                        class="text-2xl font-bold text-gray-800 dark:text-white"
+                      >
+                        Sarah Johnson
+                      </h3>
+                      <p
+                        class="text-primary-light dark:text-primary-dark font-medium mb-4"
+                      >
+                        Chief Financial Officer
+                      </p>
+                    </div>
+                    <div class="flex space-x-3">
+                      <a
+                        href="#"
+                        class="w-10 h-10 rounded-xl bg-gray-100 dark:bg-dark-600 flex items-center justify-center text-gray-500 hover:text-primary-light dark:hover:text-primary-dark transition-colors duration-300"
+                      >
+                        <i class="fab fa-linkedin-in"></i>
+                      </a>
+                    </div>
+                  </div>
+                  <p class="text-gray-600 dark:text-gray-300 mb-6">
+                    Financial architect with 20+ years in resource sector
+                    investments, capital management, and sustainable financial
+                    strategies.
+                  </p>
+                  <div
+                    class="pt-6 border-t border-gray-200 dark:border-dark-600"
+                  >
+                    <h4
+                      class="text-sm font-semibold text-gray-500 dark:text-gray-400 mb-3 uppercase tracking-wider"
+                    >
+                      Key Expertise
+                    </h4>
+                    <div class="flex flex-wrap gap-2">
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Financial Strategy</span
+                      >
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Investor Relations</span
+                      >
+                      <span
+                        class="text-xs px-3 py-1.5 bg-gray-100 dark:bg-dark-600 rounded-full font-medium"
+                        >Risk Management</span
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- View More Button -->
+          <div class="text-center mt-16">
+            <a
+              href="#"
+              class="inline-flex items-center px-6 py-3 border border-primary-light dark:border-primary-dark rounded-full text-primary-light dark:text-primary-dark font-medium hover:bg-primary-light/5 dark:hover:bg-primary-dark/10 transition"
+            >
+              View Full Leadership Team
+              <svg
+                class="w-4 h-4 ml-2"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M9 5l7 7-7 7"
+                ></path>
+              </svg>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <!-- Testimonials Section -->
+      <section class="py-20 bg-primary-light dark:bg-primary-dark text-white">
+        <div class="container mx-auto px-6">
+          <div class="max-w-4xl mx-auto text-center mb-16">
+            <span
+              class="text-sm uppercase tracking-wider text-white/80 font-medium mb-2"
+              >Client Testimonials</span
+            >
+            <h2
+              class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6"
+            >
+              What Our
+              <span class="text-secondary-light dark:text-secondary-dark"
+                >Clients Say</span
+              >
+            </h2>
+          </div>
+
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div
+              class="bg-white/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10"
+            >
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/men/32.jpg"
+                    alt="Client"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold">Rajiv Mehta</h4>
+                  <p class="text-sm text-white/80">
+                    Director, National Mineral Corp
+                  </p>
+                </div>
+              </div>
+              <p class="italic mb-6">
+                "UG Mining transformed our underground operations with their
+                innovative approach. Their team's expertise in modern mining
+                techniques delivered a 40% increase in productivity while
+                improving safety standards."
+              </p>
+              <div class="flex text-yellow-300">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+              </div>
+            </div>
+
+            <div
+              class="bg-white/10 rounded-3xl p-8 backdrop-blur-sm border border-white/10"
+            >
+              <div class="flex items-center mb-6">
+                <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                  <img
+                    src="https://randomuser.me/api/portraits/women/44.jpg"
+                    alt="Client"
+                    class="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <h4 class="font-bold">Priya Sharma</h4>
+                  <p class="text-sm text-white/80">CEO, Eastern Resources</p>
+                </div>
+              </div>
+              <p class="italic mb-6">
+                "The sustainable mining solutions provided by UG Mining have set
+                new benchmarks in our industry. Their commitment to
+                environmental stewardship while maintaining operational
+                efficiency is truly remarkable."
+              </p>
+              <div class="flex text-yellow-300">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section id="contact" class="section py-20 bg-white dark:bg-dark-900">
+        <div class="container mx-auto px-6">
+          <div
+            class="max-w-6xl mx-auto bg-white dark:bg-dark-800 rounded-3xl shadow-2xl overflow-hidden"
+          >
+            <div class="md:flex">
+              <div
+                class="md:w-1/2 bg-gradient-to-br from-primary-light to-primary-dark dark:from-dark-700 dark:to-dark-800 text-white p-12"
+              >
+                <h2 class="text-3xl font-bold font-display mb-8">
+                  Get in Touch
+                </h2>
+                <div class="space-y-6">
+                  <div class="flex items-start">
+                    <div
+                      class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-lg mb-1">Headquarters</h4>
+                      <p class="text-white/90">
+                        123 Mining Avenue<br />Kolkata, West Bengal 700001<br />India
+                      </p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-lg mb-1">Phone</h4>
+                      <p class="text-white/90">+91 33 1234 5678</p>
+                    </div>
+                  </div>
+                  <div class="flex items-start">
+                    <div
+                      class="w-12 h-12 bg-white/10 rounded-xl flex items-center justify-center mr-4 mt-1"
+                    >
+                      <i class="fas fa-envelope"></i>
+                    </div>
+                    <div>
+                      <h4 class="font-bold text-lg mb-1">Email</h4>
+                      <p class="text-white/90">info@ugmining.com</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="mt-12">
+                  <h4 class="font-bold text-lg mb-4">Follow Us</h4>
+                  <div class="flex space-x-4">
+                    <a
+                      href="#"
+                      class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
+                    >
+                      <i class="fab fa-linkedin-in"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
+                    >
+                      <i class="fab fa-twitter"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
+                    >
+                      <i class="fab fa-facebook-f"></i>
+                    </a>
+                    <a
+                      href="#"
+                      class="w-12 h-12 rounded-xl bg-white/10 flex items-center justify-center text-white hover:bg-white/20 transition duration-300"
+                    >
+                      <i class="fab fa-instagram"></i>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="md:w-1/2 p-12">
+                <h3
+                  class="text-2xl font-bold font-display mb-2 text-gray-800 dark:text-white"
+                >
+                  Send Us a Message
+                </h3>
+                <p class="text-gray-600 dark:text-gray-300 mb-8">
+                  Have questions about our services or want to discuss a
+                  potential project? Reach out to our team.
+                </p>
+                <form class="space-y-6">
+                  <div>
+                    <label
+                      for="name"
+                      class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                      >Name</label
+                    >
+                    <input
+                      type="text"
+                      id="name"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition duration-300"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="email"
+                      class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                      >Email</label
+                    >
+                    <input
+                      type="email"
+                      id="email"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition duration-300"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="subject"
+                      class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                      >Subject</label
+                    >
+                    <input
+                      type="text"
+                      id="subject"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition duration-300"
+                    />
+                  </div>
+                  <div>
+                    <label
+                      for="message"
+                      class="block text-sm font-medium mb-2 text-gray-700 dark:text-gray-300"
+                      >Message</label
+                    >
+                    <textarea
+                      id="message"
+                      rows="4"
+                      class="w-full px-4 py-3 rounded-xl border border-gray-300 dark:border-dark-600 bg-white dark:bg-dark-700 focus:outline-none focus:ring-2 focus:ring-primary-light dark:focus:ring-primary-dark transition duration-300"
+                    ></textarea>
+                  </div>
+                  <button
+                    type="submit"
+                    class="w-full bg-primary-light dark:bg-primary-dark text-white py-4 rounded-xl font-medium hover:bg-opacity-90 transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+                  >
+                    Send Message
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA Section -->
+      <section
+        class="py-20 bg-gradient-to-r from-primary-light to-secondary-light dark:from-primary-dark dark:to-secondary-dark text-white"
+      >
+        <div class="container mx-auto px-6 text-center">
+          <h2
+            class="text-3xl md:text-4xl lg:text-5xl font-bold font-display mb-6"
+          >
+            Ready to Transform Your Mining Operations?
+          </h2>
+          <p class="text-xl text-white/90 mb-10 max-w-3xl mx-auto">
+            Contact our team of experts to discuss how we can help you achieve
+            your mining goals with innovative, sustainable solutions.
+          </p>
+          <a
+            href="#contact"
+            class="inline-flex items-center bg-white text-dark-800 hover:bg-gray-100 px-8 py-4 rounded-xl font-bold transition duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-xl"
+          >
+            <span>Get Started Today</span>
+            <i class="fas fa-arrow-right ml-3"></i>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark-800 text-gray-300 py-16">
+      <div class="container mx-auto px-6">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-10">
+          <div>
+            <div class="flex items-center mb-6">
+              <div
+                class="w-10 h-10 bg-primary-light rounded-xl flex items-center justify-center mr-3"
+              >
+                <i class="fas fa-mountain text-white"></i>
+              </div>
+              <span class="text-xl font-bold font-display text-white"
+                >UG Mining</span
+              >
+            </div>
+            <p class="mb-6">
+              Pioneering sustainable underground mining solutions with
+              innovation and expertise.
+            </p>
+            <div class="flex space-x-4">
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a
+                href="#"
+                class="text-gray-400 hover:text-white transition duration-300"
+              >
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-lg mb-6">Quick Links</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#home" class="hover:text-white transition duration-300"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  class="hover:text-white transition duration-300"
+                  >Services</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#about"
+                  class="hover:text-white transition duration-300"
+                  >About Us</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#leadership"
+                  class="hover:text-white transition duration-300"
+                  >Leadership</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#contact"
+                  class="hover:text-white transition duration-300"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-lg mb-6">Services</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Exploration</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Extraction</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Processing</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Logistics</a
+                >
+              </li>
+              <li>
+                <a href="#" class="hover:text-white transition duration-300"
+                  >Sustainability</a
+                >
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-white font-bold text-lg mb-6">Newsletter</h4>
+            <p class="mb-6">
+              Subscribe to our newsletter for the latest updates and insights.
+            </p>
+            <form class="flex">
+              <input
+                type="email"
+                placeholder="Your email"
+                class="px-4 py-3 rounded-l-lg w-full bg-dark-700 focus:outline-none focus:ring-1 focus:ring-primary-light text-white"
+              />
+              <button
+                type="submit"
+                class="bg-primary-light hover:bg-primary-dark px-4 py-3 rounded-r-lg text-white"
+              >
+                <i class="fas fa-paper-plane"></i>
+              </button>
+            </form>
+          </div>
+        </div>
+        <div
+          class="border-t border-dark-700 mt-12 pt-8 text-sm text-center text-gray-500"
+        >
+          <p>&copy; 2023 UG Mining Corporation. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      // Preloader
+      window.addEventListener("load", function () {
+        const preloader = document.getElementById("preloader");
+        setTimeout(() => {
+          preloader.style.opacity = "0";
+          setTimeout(() => {
+            preloader.style.display = "none";
+          }, 500);
+        }, 1000);
+      });
+
+      // Mobile Menu Toggle
+      const mobileMenuButton = document.getElementById("mobile-menu-button");
+      const mobileMenuClose = document.getElementById("mobile-menu-close");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.remove("translate-x-full");
+        document.body.style.overflow = "hidden";
+      });
+
+      mobileMenuClose.addEventListener("click", () => {
+        mobileMenu.classList.add("translate-x-full");
+        document.body.style.overflow = "";
+      });
+
+      // Close menu when clicking on a link
+      document.querySelectorAll("#mobile-menu a").forEach((link) => {
+        link.addEventListener("click", () => {
+          mobileMenu.classList.add("translate-x-full");
+          document.body.style.overflow = "";
+        });
+      });
+
+      // Dark/Light Mode Toggle
+      const themeToggle = document.getElementById("theme-toggle");
+      const mobileThemeToggle = document.getElementById("mobile-theme-toggle");
+      function toggleTheme() {
+        if (
+          localStorage.getItem("color-theme") === "dark" ||
+          (!("color-theme" in localStorage) &&
+            window.matchMedia("(prefers-color-scheme: dark)").matches)
+        ) {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("color-theme", "dark");
+        } else {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("color-theme", "light");
+        }
+      }
+
+      themeToggle.addEventListener("click", toggleTheme);
+      mobileThemeToggle.addEventListener("click", toggleTheme);
+
+      // Smooth scrolling for anchor links
+      document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+        anchor.addEventListener("click", function (e) {
+          e.preventDefault();
+
+          const targetId = this.getAttribute("href");
+          if (targetId === "#") return;
+
+          const targetElement = document.querySelector(targetId);
+          if (targetElement) {
+            targetElement.scrollIntoView({
+              behavior: "smooth",
+            });
+          }
+        });
+      });
+
+      // Header scroll effect
+      window.addEventListener("scroll", function () {
+        const header = document.querySelector("header");
+        if (window.scrollY > 50) {
+          header.classList.add("shadow-lg");
+          header.classList.add("border-b");
+          header.classList.add("border-gray-200");
+          header.classList.add("dark:border-dark-700");
+        } else {
+          header.classList.remove("shadow-lg");
+          header.classList.remove("border-b");
+          header.classList.remove("border-gray-200");
+          header.classList.remove("dark:border-dark-700");
+        }
+      });
+
+      // Animate elements when they come into view
+      const animateOnScroll = function () {
+        const elements = document.querySelectorAll(
+          ".animate-fade-in, .animate-float"
+        );
+
+        elements.forEach((element) => {
+          const elementPosition = element.getBoundingClientRect().top;
+          const windowHeight = window.innerHeight;
+
+          if (elementPosition < windowHeight - 100) {
+            element.style.opacity = "1";
+            element.style.transform = "translateY(0)";
+          }
+        });
+      };
+
+      // Set initial state for animated elements
+      document.querySelectorAll(".animate-fade-in").forEach((el) => {
+        el.style.opacity = "0";
+        el.style.transition = "opacity 0.8s ease, transform 0.8s ease";
+      });
+
+      document.querySelectorAll(".animate-float").forEach((el) => {
+        el.style.transform = "translateY(20px)";
+        el.style.transition = "transform 0.8s ease";
+      });
+
+      // Run once on load and then on scroll
+      animateOnScroll();
+      window.addEventListener("scroll", animateOnScroll);
+    </script>
+  </body>
+</html>

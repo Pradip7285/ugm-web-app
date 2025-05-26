@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+       <style>
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background: #f4f6f8;
+    padding: 20px;
+    margin: 0;
+  }
+
+  .form-container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  }
+
+  .form-container h2 {
+    margin-bottom: 20px;
+    font-size: 1.6em;
+    color: #333;
+    text-align: center;
+  }
+
+  .form-group {
+    margin-bottom: 18px;
+  }
+
+  .form-group label {
+    display: block;
+    margin-bottom: 8px;
+    color: #555;
+    font-weight: 500;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1em;
+    transition: border-color 0.3s ease;
+  }
+
+  .form-group input:focus,
+  .form-group textarea:focus {
+    border-color: #0077ff;
+    outline: none;
+  }
+
+  .form-group input[type="file"] {
+    padding: 0;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    background: #0077ff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background 0.3s ease;
+  }
+
+  button:hover {
+    background: #005fcc;
+  }
+
+  .message {
+    margin-top: 15px;
+    text-align: center;
+    font-size: 0.95em;
+  }
+</style>
+</head>
+<body>
+ 
+
+<div class="form-container">
+  <h2>Contact Us</h2>
+  <form id="contactForm" enctype="multipart/form-data">
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input type="text" id="firstName" name="firstName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="lastName">Last Name</label>
+      <input type="text" id="lastName" name="lastName" required />
+    </div>
+
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input type="email" id="email" name="email" required />
+    </div>
+
+    <div class="form-group">
+      <label for="subject">Subject</label>
+      <input type="text" id="subject" name="subject" required />
+    </div>
+
+    <div class="form-group">
+      <label for="message">Your Message</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+    </div>
+
+    <div class="form-group">
+      <label for="attachment">Attachment</label>
+      <input type="file" id="attachment" name="attachment" />
+    </div>
+
+    <button type="submit">Send Message</button>
+    <div class="message" id="formMessage"></div>
+  </form>
+</div>
+
+<script>
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const formMessage = document.getElementById('formMessage');
+    const form = e.target;
+    const formData = new FormData(form);
+
+    fetch('/from_post', {
+      method: 'POST',
+      body: formData
+    })
+      .then(res => res.json())
+      .then(response => {
+        formMessage.style.color = 'green';
+        formMessage.textContent = 'Message sent successfully!';
+        form.reset();
+      })
+      .catch(err => {
+        formMessage.style.color = 'red';
+        formMessage.textContent = 'Error sending message. Please try again.';
+      });
+  });
+</script>
+
+<!-- <script>
+    document.getElementById('contactForm').addEventListener('submit', async function (e) {
+        e.preventDefault();
+        const form = e.target;
+        const formData = new FormData(form);
+
+        const fileInput = form.querySelector('input[name="attachment"]'); // Get the actual file input element
+        const file = fileInput.files[0]; // Get the selected file
+
+        // Initialize variables for file data, which might be empty if no file is selected
+        let base64Data = '';
+        let filename = '';
+        let mimeType = '';
+
+        if (file) { // Check if a file was actually selected
+            filename = file.name;
+            mimeType = file.type;
+
+            // Use FileReader to convert the file to Base64
+            base64Data = await new Promise((resolve, reject) => {
+                const reader = new FileReader();
+                reader.onload = () => {
+                    // reader.result will be like "data:image/png;base64,iVBORw0KGgo..."
+                    // We need to extract the part after the comma
+                    const base64String = reader.result.split(',')[1];
+                    resolve(base64String);
+                };
+                reader.onerror = error => reject(error);
+                reader.readAsDataURL(file); // Read the file as a data URL
+            });
+        }
+
+        const dataToSend = {
+            firstName: formData.get('firstName'),
+            lastName: formData.get('lastName'),
+            email: formData.get('email'),
+            subject: formData.get('subject'),
+            message: formData.get('message'),
+            fileBase64: base64Data, // This will be empty string if no file
+            filename: filename,     // This will be empty string if no file
+            mimeType: mimeType      // This will be empty string if no file
+        };
+
+        const fetchUrl = "/from_post"
+        fetch(fetchUrl, {
+            method: 'POST',
+            body: JSON.stringify(dataToSend),
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        })
+        .then(res => {
+            // Always check for network errors first
+            if (!res.ok) {
+                console.error('HTTP error! Status:', res.status);
+                // Attempt to parse JSON error message if available
+                return res.json().then(errorData => {
+                    throw new Error(errorData.message || 'Unknown server error');
+                }).catch(() => {
+                    throw new Error(`Server responded with status ${res.status}`);
+                });
+            }
+            return res.json();
+        })
+        .then(response => {
+            alert('Submitted successfully');
+            console.log(response);
+            form.reset(); // Optionally clear the form
+        })
+        .catch(err => {
+            alert('Submission failed. Check console for details.');
+            console.error('Fetch error:', err);
+        });
+    });
+</script> -->
+</body>
+</html>
